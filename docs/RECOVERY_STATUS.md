@@ -14,7 +14,7 @@
 <tr><td align="center">Historical Legacy export</td><td align="center">Recovered</td><td align="center">Single historical application script plus manifest preserved privately</td></tr>
 <tr><td align="center">Backend read-only review</td><td align="center">In progress</td><td align="center">Current source components and action contracts mapped</td></tr>
 <tr><td align="center">Isolated regression testing</td><td align="center">Partial</td><td align="center">Simulated tests completed without accessing production data</td></tr>
-<tr><td align="center">Signed iOS Shortcut recovery</td><td align="center">Partial</td><td align="center">Envelope inspected; workflow actions not yet decoded</td></tr>
+<tr><td align="center">Signed iOS Shortcut recovery</td><td align="center">Partial</td><td align="center">AEA1 signed/profile 0 identified; signing key layout inspected; workflow actions not yet decoded</td></tr>
 <tr><td align="center">Active deployment revision comparison</td><td align="center">Pending</td><td align="center">Source export is not proof of deployed version</td></tr>
 <tr><td align="center">Staging environment</td><td align="center">Pending</td><td align="center">No clone/deployment created or modified</td></tr>
 </tbody>
@@ -34,6 +34,16 @@ flowchart TD
 ```
 
 **Diagram type:** High-level Component/Data Flow Diagram for V1 source recovery. This is not a new product UI or evidence of a public installation.
+
+## Signed Shortcut Envelope — Verified Progress
+
+The original private Shortcut uses the **AEA1 Apple Encrypted Archive** envelope with **profile 0** (signed, not content-encrypted). The authentication plist contains a direct `SigningPublicKey` entry and an `AppleIDCertificateChain`, a structure that differs from decoders relying exclusively on `SigningCertificateChain`.
+
+Only structural metadata was inspected. **The workflow's `WFWorkflowActions` have not been decoded** and no Shortcut HTTP endpoint, user token, or action count is claimed as verified.
+
+**Next technical gate:** choose a trusted decoder supporting this envelope variant, recover the inner Apple Archive and binary plist in a private offline environment, then produce a sanitized action inventory.
+
+For background format documentation, consult [AEA](https://keith.github.io/xcode-man-pages/aea.1.html) and [Apple Archive](https://keith.github.io/xcode-man-pages/aa.1.html). They describe the macOS decoding tools; they are not part of the existing Calify application.
 
 ## Recovery Integrity Rules
 
