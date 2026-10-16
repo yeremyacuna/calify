@@ -31,6 +31,12 @@ flowchart LR
     class C,D,E,F,G,H,I future
 ```
 
+## Phase 00 — Current Progress
+
+**Source recovery checkpoint:** The Apps Script source project was exported to a **private** offline recovery bundle (14 `.gs` modules plus manifest), alongside the historic monolithic backup. An isolated in-memory regression suite identified items for the hardening backlog without accessing live grades. The signed Shortcut envelope was inspected, but its action payload still requires a compatible decoder. **This does not verify the currently deployed revision or authorize production changes.**
+
+See [Recovery Status](RECOVERY_STATUS.md). Detailed technical audit material and the signed original Shortcut remain **private**.
+
 ## Milestones
 
 <div align="center">
