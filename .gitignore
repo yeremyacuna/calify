@@ -1,4 +1,4 @@
-# Credentials and local configuration
+# Sensitive local configuration
 .env
 .env.*
 !.env.example
@@ -9,15 +9,16 @@
 **/*.key
 **/*credentials*.json
 
-# Private Shortcut exports and academic data
+# Raw personal exports and academic data
 *.shortcut
+!apps/ios-shortcuts/releases/*.shortcut
 *.wflow
 *_private.*
 private/
 backups/
 *.xlsx
 
-# Tooling and build outputs
+# Tooling and build output
 node_modules/
 dist/
 coverage/
