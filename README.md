@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Official Calify logo: reserved for an approved brand asset. -->
+<img src="assets/branding/calify-logo.svg" alt="Calify — Cool Academic logo" width="355" />
 
 # Calify
 
@@ -19,6 +19,26 @@
 
 ---
 
+<div align="center">
+  <img src="assets/branding/calify-readme-banner.svg" alt="Calify Cool Academic — Track, Understand, Achieve" width="100%" />
+</div>
+
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Brand Identity](#-brand-identity)
+- [V1 Core Capabilities](#-calify-v1--core-capabilities)
+- [Architecture](#️-architecture)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Roadmap](#️-engineering-roadmap)
+- [Documentation](#-documentation)
+- [Security & Privacy](#-security--privacy)
+- [License](#-license)
+
+---
+
 ## 📖 Overview
 
 **Calify** is an independent software engineering project that connects **Apple Shortcuts**, a **Google Apps Script API**, and **Google Sheets** to simplify academic assessment tracking.
@@ -27,6 +47,26 @@ Calify V1 is currently used as a functional personal iOS-to-Google-Workspace wor
 
 > [!IMPORTANT]
 > **Project status:** this public repository currently contains documentation and a future-facing project scaffold—not an installable release. The functioning personal Shortcut, its credentials, personal trackers, and unreviewed production code are **not published** here.
+
+## 🎨 Brand Identity
+
+<div align="center">
+  <img src="assets/branding/calify-app-icon.svg" alt="Calify app icon — Cool Academic" width="155" />
+  <p><strong>Cool Academic</strong> · Midnight Navy · Teal · Cyan</p>
+</div>
+
+Calify uses the selected **Option 01 — Cool Academic** visual direction: a composed educational identity combining trust, clarity and measurable progress. Its design system specifies **Plus Jakarta Sans** for headings and **Inter** for body text, with a consistent 8 px spacing rhythm.
+
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Midnight Navy</th><th align="center">Teal</th><th align="center">Cyan</th><th align="center">Soft White</th><th align="center">Slate</th></tr></thead>
+<tbody><tr><td align="center"><code>#0B1F3B</code></td><td align="center"><code>#14B8A6</code></td><td align="center"><code>#38BDF8</code></td><td align="center"><code>#F8FAFC</code></td><td align="center"><code>#64748B</code></td></tr></tbody>
+</table>
+</div>
+
+[**Brand Guidelines**](assets/branding/README.md) · [**App Icon**](assets/branding/calify-app-icon.svg) · [**Logo Variations**](assets/branding/calify-logo-monochrome.svg) · [**Design Tokens**](assets/branding/design-tokens.json)
+
+> **Design status:** Vector artwork in this repository is an editable interpretation of the approved branding concept. Product UI previews are conceptual; no web/mobile app UI has been released.
 
 ## ✨ Calify V1 — Core Capabilities
 
@@ -61,8 +101,6 @@ Each tracker uses four worksheets: **Dashboard → Grade Entry → Control → S
 ## 🛠️ Tech Stack
 
 <div align="center">
-
-<div align="center">
 <table align="center">
 <thead><tr><th align="center"><strong>Current Integration</strong></th><th align="center"><strong>Development Tooling</strong></th></tr></thead>
 <tbody>
@@ -73,9 +111,6 @@ Each tracker uses four worksheets: **Dashboard → Grade Entry → Control → S
 <tr><td align="center"><img alt="HTTP / JSON" src="https://img.shields.io/badge/HTTP_%2B_JSON-475569?style=for-the-badge&amp;logo=json&amp;logoColor=white" /></td><td align="center"><img alt="clasp" src="https://img.shields.io/badge/clasp-source%20recovery-4285F4?style=for-the-badge&amp;logo=google&amp;logoColor=white" /></td></tr>
 </tbody>
 </table>
-</div>
-
-
 </div>
 
 GitHub Actions and `clasp` remain tooling planned for recovery and CI/CD. Badges do not imply that those pipelines are deployed.
@@ -104,9 +139,9 @@ calify/
 ├── config/
 │   └── examples/              # Safe configuration examples (future)
 ├── assets/
-│   ├── branding/              # Official logo pending approval
+│   ├── branding/              # Selected logo, app icon, banner and tokens
 │   ├── diagrams/              # Public architecture diagrams
-│   └── screenshots/           # Demo-only screenshots (future)
+│   └── screenshots/           # Verified demo screenshots (future)
 ├── docs/
 │   ├── api/
 │   ├── design/
@@ -159,6 +194,7 @@ Calify follows a privacy-first approach. The public repository must never includ
 <table align="center">
 <thead><tr><th align="center">Document</th><th align="center">Purpose</th></tr></thead>
 <tbody>
+<tr><td align="center"><a href="assets/branding/README.md">Brand Guidelines</a></td><td align="center">Visual identity, palette, typography and source assets</td></tr>
 <tr><td align="center"><a href="docs/ARCHITECTURE.md">Architecture</a></td><td align="center">V1 baseline, V2 target, diagrams, data rules</td></tr>
 <tr><td align="center"><a href="docs/ROADMAP.md">Roadmap</a></td><td align="center">Milestones, release gates and required learning</td></tr>
 <tr><td align="center"><a href="docs/design/IOS_SHORTCUT_V2.md">iOS Shortcut V2 Design</a></td><td align="center">Proposed UX and server integration</td></tr>

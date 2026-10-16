@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 480" role="img" aria-labelledby="title desc">
+<title id="title">Calify — Track, Understand, Achieve</title>
+<desc id="desc">README banner in Midnight Navy, Teal and Cyan: Calify branding, an academic progress motif, and three capability symbols.</desc>
+<defs>
+ <linearGradient id="night" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0B1F3B"/><stop offset="100%" stop-color="#124261"/></linearGradient>
+ <linearGradient id="hill" x1="0" x2="0.95" y1="0" y2="1"><stop stop-color="#1F82A2"/><stop offset="100%" stop-color="#0B1F3B"/></linearGradient>
+ <linearGradient id="line" x1="0" x2="1"><stop stop-color="#14B8A6"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient>
+ <clipPath id="round"><rect width="1500" height="480" rx="22"/></clipPath>
+</defs>
+<g clip-path="url(#round)">
+<rect width="1500" height="480" fill="url(#night)"/>
+<circle cx="1295" cy="118" r="62" fill="#EBF7FC" opacity=".82"/>
+<path d="M510 390 L720 245 L820 326 L953 178 L1098 280 L1225 151 L1500 378 V480 H510Z" fill="#2A87AA" opacity=".58"/>
+<path d="M532 440 L752 286 L865 362 L1024 233 L1192 332 L1360 231 L1520 367 V480 H532Z" fill="#166086" opacity=".86"/>
+<path d="M490 480 L700 370 L832 423 L980 319 L1128 390 L1320 326 L1500 385 V480Z" fill="#0B3457"/>
+<path d="M1500 450 C1270 403 1288 391 1127 409 C1002 426 927 404 875 458 L762 500" fill="none" stroke="#38BDF8" stroke-width="23" opacity=".65" stroke-linecap="round"/>
+<rect x="1201" y="220" width="90" height="122" rx="4" fill="#0B1F3B"/>
+<rect x="1238" y="173" width="17" height="60" fill="#0B1F3B"/>
+<path d="M1201 220 L1244 193 L1291 220Z" fill="#0B1F3B"/>
+<path d="M1184 350 L1184 292 L1148 292 L1148 350 M1314 350 L1314 300 L1356 300 L1356 350" fill="#0B1F3B" stroke="#0B1F3B" stroke-width="10"/>
+<path d="M1219 255 V282 M1264 255 V282" stroke="#83C9DB" stroke-width="10" opacity=".58"/>
+<path d="M615 300 Q725 236 816 286 Q854 312 893 260" fill="none" stroke="url(#line)" stroke-width="6" stroke-dasharray="1 17" stroke-linecap="round" opacity=".85"/>
+<circle cx="893" cy="260" r="12" fill="#38BDF8"/>
+<rect x="645" y="93" width="185" height="112" rx="18" fill="#F8FAFC" opacity=".93"/>
+<text x="670" y="128" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" fill="#0B1F3B">GRADE PROGRESS</text>
+<path d="M678 169 L713 155 L746 160 L778 137 L799 140" fill="none" stroke="#14B8A6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(52,74) scale(1.1)">
+<path d="M81 45 C60 44 46 54 39 71 L18 71 C21 41 45 19 83 20 L100 20 C105 20 109 25 107 31 C105 39 99 45 89 45 Z" fill="#38BDF8"/>
+<path d="M81 45 C61 44 48 53 41 68 C38 73 36 80 36 88 C36 103 48 110 61 110 L77 110 L77 130 L55 130 C28 130 13 112 13 90 C13 64 26 44 50 38 C63 34 79 35 93 35 C93 41 87 45 81 45 Z" fill="#14B8A6"/>
+<path d="M56 86 C59 76 69 70 84 70 L91 70 C106 70 117 80 120 94 C122 100 121 106 114 106 L61 106 C56 106 52 103 52 99 C52 94 53 89 56 86 Z" fill="#38BDF8"/>
+</g>
+<text x="205" y="188" fill="#F8FAFC" font-family="'Plus Jakarta Sans',Inter,Arial,sans-serif" font-size="102" font-weight="800" letter-spacing="-4">Calify</text>
+<text x="72" y="258" fill="#E7F4F9" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="500">Track your grades. Understand your progress.</text>
+<text x="72" y="296" fill="#66D5DA" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700">Achieve more.</text>
+<path d="M72 346 H520" stroke="#4B8197" stroke-width="2"/>
+<g fill="#EAF6FB" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700">
+<circle cx="92" cy="404" r="20" stroke="#14B8A6" fill="none" stroke-width="3"/>
+<path d="M82 404 L90 412 L104 394" stroke="#14B8A6" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="122" y="413">Track</text>
+<rect x="240" y="395" width="7" height="17" rx="2" fill="#38BDF8"/>
+<rect x="252" y="384" width="7" height="28" rx="2" fill="#38BDF8"/>
+<rect x="264" y="373" width="7" height="39" rx="2" fill="#38BDF8"/>
+<text x="285" y="413">Understand</text>
+<circle cx="463" cy="404" r="17" fill="none" stroke="#14B8A6" stroke-width="3"/>
+<circle cx="463" cy="404" r="7" fill="none" stroke="#14B8A6" stroke-width="3"/>
+<text x="489" y="413">Achieve</text>
+</g>
+</g></svg>

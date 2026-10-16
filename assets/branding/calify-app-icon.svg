@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+<title id="t">Calify app icon</title><desc id="d">Midnight navy rounded square containing Calify's stylized teal and cyan academic progress emblem.</desc>
+<defs><linearGradient id="tile" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#112E4B"/><stop offset="100%" stop-color="#06172D"/></linearGradient><linearGradient id="light" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#14B8A6"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs>
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#tile)"/>
+<g transform="translate(68,52) scale(2.66)">
+<path d="M81 45 C60 44 46 54 39 71 L18 71 C21 41 45 19 83 20 L100 20 C105 20 109 25 107 31 C105 39 99 45 89 45 Z" fill="#0C5980"/>
+<path d="M81 45 C61 44 48 53 41 68 C38 73 36 80 36 88 C36 103 48 110 61 110 L77 110 L77 130 L55 130 C28 130 13 112 13 90 C13 64 26 44 50 38 C63 34 79 35 93 35 C93 41 87 45 81 45 Z" fill="url(#light)"/>
+<path d="M56 86 C59 76 69 70 84 70 L91 70 C106 70 117 80 120 94 C122 100 121 106 114 106 L61 106 C56 106 52 103 52 99 C52 94 53 89 56 86 Z" fill="#38BDF8"/>
+<path d="M57 87 C64 81 75 82 90 82 C77 87 69 96 61 106 C55 106 51 102 53 97 Z" fill="#0D9DA8"/>
+</g></svg>
