@@ -21,12 +21,18 @@ gitGraph
 
 The Mermaid diagram is illustrative; it is **not** an exact record of GitHub history or existing releases.
 
-| Branch | Purpose | Merge Rule |
-|:---:|:---:|:---:|
-| `main` | Public stable project state and approved releases | Only reviewed changes and accepted releases |
-| `v2` | Calify V2 integration branch | Reviewed PRs from feature and fix branches |
-| `feature/v2-*` | One scoped V2 feature | PR to `v2` after tests |
-| `fix/v2-*` | V2 defect correction | PR to `v2` after regression tests |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Branch</th><th align="center">Purpose</th><th align="center">Merge Rule</th></tr></thead>
+<tbody>
+<tr><td align="center"><code>main</code></td><td align="center">Public stable project state and approved releases</td><td align="center">Only reviewed changes and accepted releases</td></tr>
+<tr><td align="center"><code>v2</code></td><td align="center">Calify V2 integration branch</td><td align="center">Reviewed PRs from feature and fix branches</td></tr>
+<tr><td align="center"><code>feature/v2-*</code></td><td align="center">One scoped V2 feature</td><td align="center">PR to <code>v2</code> after tests</td></tr>
+<tr><td align="center"><code>fix/v2-*</code></td><td align="center">V2 defect correction</td><td align="center">PR to <code>v2</code> after regression tests</td></tr>
+</tbody>
+</table>
+</div>
+
 
 No dedicated `v1` branch is necessary for the current published documentation baseline. The personal V1 production Apps Script source is **not** represented as source code in this public repository yet.
 

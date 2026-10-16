@@ -11,12 +11,18 @@ These requirements must be resolved before selecting an open-source license.
 
 ## Common Options
 
-| License Model | Use | Copy & Redistribution | Warranty / Liability |
-|:------------:|:---:|:---------------------:|:--------------------:|
-| MIT | Broad permission | Allowed, including commercial derivatives | Includes disclaimer and limitation |
-| GPLv3 | Broad permission with copyleft | Allowed; distributed modified code generally remains open under GPL | Includes disclaimer and limitation |
-| Source-available or proprietary terms | Defined by the author | Can be restricted in a custom agreement | Requires carefully reviewed terms |
-| No license yet | No general software permission granted | Not generally permitted beyond legal exceptions/platform terms | No standard license disclaimer |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">License Model</th><th align="center">Use</th><th align="center">Copy &amp; Redistribution</th><th align="center">Warranty / Liability</th></tr></thead>
+<tbody>
+<tr><td align="center">MIT</td><td align="center">Broad permission</td><td align="center">Allowed, including commercial derivatives</td><td align="center">Includes disclaimer and limitation</td></tr>
+<tr><td align="center">GPLv3</td><td align="center">Broad permission with copyleft</td><td align="center">Allowed; distributed modified code generally remains open under GPL</td><td align="center">Includes disclaimer and limitation</td></tr>
+<tr><td align="center">Source-available or proprietary terms</td><td align="center">Defined by the author</td><td align="center">Can be restricted in a custom agreement</td><td align="center">Requires carefully reviewed terms</td></tr>
+<tr><td align="center">No license yet</td><td align="center">No general software permission granted</td><td align="center">Not generally permitted beyond legal exceptions/platform terms</td><td align="center">No standard license disclaimer</td></tr>
+</tbody>
+</table>
+</div>
+
 
 **Critical:** MIT and GPLv3 cannot be used to prohibit forks or redistribution. Open-source licenses generally permit both.
 
