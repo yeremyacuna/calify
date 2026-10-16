@@ -1,43 +1,23 @@
 {
-  "$schema": "https://design-tokens.github.io/community-group/format/",
   "name": "Calify",
-  "identity": "Cool Academic",
-  "status": "selected_brand_direction",
+  "status": "selected-official-reference",
+  "option": "Cool Academic",
   "palette": {
-    "midnightNavy": {
-      "value": "#0B1F3B",
-      "type": "color",
-      "usage": "Primary brand / text"
-    },
-    "teal": {
-      "value": "#14B8A6",
-      "type": "color",
-      "usage": "Positive progress / accent"
-    },
-    "cyan": {
-      "value": "#38BDF8",
-      "type": "color",
-      "usage": "Highlight / graphics"
-    },
-    "softWhite": {
-      "value": "#F8FAFC",
-      "type": "color",
-      "usage": "Light surface"
-    },
-    "slate": {
-      "value": "#64748B",
-      "type": "color",
-      "usage": "Supporting UI text"
-    }
+    "Midnight Navy": "#0B1F3B",
+    "Teal": "#14B8A6",
+    "Cyan": "#38BDF8",
+    "Soft White": "#F8FAFC",
+    "Slate": "#64748B"
   },
   "typography": {
     "display": "Plus Jakarta Sans",
     "body": "Inter"
   },
   "layout": {
-    "spacingBase": 8,
+    "spacingUnit": 8,
     "cardRadius": 16,
     "touchTargetMin": 44
   },
-  "note": "Typography names are recommendations. Generated concept images are not pixel-exact specification."
+  "source": "Option_01_Cool_Academic.zip (original user-approved design files)",
+  "disclaimer": "Colors and font choices are design specifications, not pixel measurements of generated raster concept artwork."
 }

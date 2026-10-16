@@ -1,55 +1,48 @@
-# Calify Brand Identity — Cool Academic (Option 01)
+# Calify Brand Identity — Original Approved Option 01
 
-**Status:** Option 01 selected as Calify's brand direction. The repository contains **editable vector interpretations** of its concept mark, logo, app icon and banner; the original generated PNG/PDF mockups remain preserved in the prior concept package and have not been uploaded by the current GitHub integration.
+**Status:** Official visual direction selected; original raster media **pending binary publication**.
 
-## Design intent
+The owner supplied `Option_01_Cool_Academic.zip`. **Only that archive is the authoritative reference for the logo, wordmark, application icon and README banner.** The vector reinterpretations that were previously published in this repository were inaccurate and have been withdrawn from the current branch.
 
-The selected visual identity balances trustworthy academic clarity with a modern software-product aesthetic. The stylized C represents progress, interconnected learning, and a continuous journey. Shapes, gradients, and spacing should remain restrained enough to work at app-icon sizes.
+## Authentic Source Files
 
-## Brand colors
+| Source file | Status | SHA-256 |
+|:---:|:---:|:---:|
+| `app-icon.png` | Original in user-provided ZIP; not yet in GitHub | `35104b0818d4e2495629a120...` |
+| `readme-banner.png` | Original in user-provided ZIP; not yet in GitHub | `0109d1505727f7f7f907a282...` |
+| `branding-board.png` | Original in user-provided ZIP; not yet in GitHub | `1f079cea7216e6f266e2c33d...` |
+| `wireframes-detailed.png` | Original in user-provided ZIP; not yet in GitHub | `8b0d84ac282f66d1951552d6...` |
+| `brand-guidelines.pdf` | Original in user-provided ZIP; not yet in GitHub | `b0fd038b345f75c4c82d0cfa...` |
 
-<div align="center">
-<table align="center">
-<thead><tr><th align="center">Token</th><th align="center">Hex</th><th align="center">Role</th></tr></thead>
-<tbody>
-<tr><td align="center">Midnight Navy</td><td align="center"><code>#0B1F3B</code></td><td align="center">Primary text and brand foundation</td></tr>
-<tr><td align="center">Teal</td><td align="center"><code>#14B8A6</code></td><td align="center">Positive progress, accent</td></tr>
-<tr><td align="center">Cyan</td><td align="center"><code>#38BDF8</code></td><td align="center">Highlights and supporting graphics</td></tr>
-<tr><td align="center">Soft White</td><td align="center"><code>#F8FAFC</code></td><td align="center">Light surfaces</td></tr>
-<tr><td align="center">Slate</td><td align="center"><code>#64748B</code></td><td align="center">Supporting typography</td></tr>
-</tbody></table>
-</div>
+These are reference hashes (abbreviated) to help verify origin when the actual binary files are uploaded; a full manifest is included in the prepared original-asset package.
 
-**Typography recommendations:** Plus Jakarta Sans (headlines/wordmark) and Inter (body/UI). No font files are redistributed. SVG wordmarks use system fallbacks unless official font assets are supplied under an appropriate license.
+## Visual Language
 
-**Core spacing scale:** 8 px. **Card radius:** ~16 px. **Minimum touch target:** 44 × 44 px. Verify color contrast for actual UI components; Teal and Cyan should not automatically be used as small body text on white.
+- Logo: the **layered C emblem** from the approved branding board, paired with the **Calify** wordmark.
+- Palette: Midnight Navy `#0B1F3B`, Teal `#14B8A6`, Cyan `#38BDF8`, Soft White `#F8FAFC`, Slate `#64748B`.
+- Display font: **Plus Jakarta Sans**; body font: **Inter**.
+- Spacing unit: 8 px; card radius: 16 px; touch target minimum: 44 px.
 
-## Assets
+[Design tokens](design-tokens.json)
 
-| File | Purpose |
-|:---:|:---:|
-| [calify-logo.svg](calify-logo.svg) | Brand wordmark with the progress symbol |
-| [calify-mark.svg](calify-mark.svg) | Standalone brand mark |
-| [calify-app-icon.svg](calify-app-icon.svg) | Vector app icon concept |
-| [calify-logo-monochrome.svg](calify-logo-monochrome.svg) | One-color identity |
-| [calify-readme-banner.svg](calify-readme-banner.svg) | Repository header banner |
-| [design-tokens.json](design-tokens.json) | Reusable proposed color and layout tokens |
+## Expected Source Layout After Binary Upload
 
-The vector assets are authored interpretations based on the approved **Cool Academic** direction; they are **not pixel-identical exports** from the generated raster artwork.
+```text
+assets/branding/
+├── official/
+│   ├── app-icon.png
+│   ├── wordmark-crop.png
+│   └── readme-banner.png
+├── reference/
+│   ├── branding-board.png
+│   ├── wireframes-detailed.png
+│   └── brand-guidelines.pdf
+├── design-tokens.json
+└── README.md
+```
 
-## HCI design checks
+Do **not** substitute AI-redrawn, visually similar, or invented SVG logos for the user-selected originals.
 
-- Establish clear information hierarchy, particularly assessment name, state, input and confirmation.
-- Preserve the distinction between pending score and legitimate zero.
-- Provide feedback and recovery for errors.
-- Use accessible contrast, clear focus states, and appropriate touch targets.
-- Avoid relying on color alone to communicate academic status.
-- Use synthetic grades in public design demonstrations.
+## UX & Design Scope
 
-## Product honesty
-
-The original option pack includes aspirational app mockups and wireframes; those are **not screenshots of the current V1**. Do not display them as evidence of a shipped Web/PWA or native iOS application. A real screenshot collection will be added after staging/demo UI is built.
-
-## Source and licensing
-
-Public SVG/JSON/Markdown brand assets in this repository are covered by the repository's [GPLv3](../../LICENSE) unless explicitly noted otherwise. A software license is not a trademark grant; branding and name protections are separate matters.
+The images in the selected board illustrate future concepts, not screenshots of existing Calify V1 functionality. Do not present concept screens as shipped product functionality. The source ZIP contains no personal credentials, endpoint URLs, academic grades, or private scripts.

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/branding/calify-logo.svg" alt="Calify — Cool Academic logo" width="355" />
+<!-- Official approved logo is supplied as the original PNG in the Option 01 upload package. Do not substitute a redrawn SVG. -->
 
 # Calify
 
@@ -19,9 +19,7 @@
 
 ---
 
-<div align="center">
-  <img src="assets/branding/calify-readme-banner.svg" alt="Calify Cool Academic — Track, Understand, Achieve" width="100%" />
-</div>
+<!-- The approved original banner will be added here after the PNG binary has been uploaded. -->
 
 ## 📑 Table of Contents
 
@@ -51,7 +49,7 @@ Calify V1 is currently used as a functional personal iOS-to-Google-Workspace wor
 ## 🎨 Brand Identity
 
 <div align="center">
-  <img src="assets/branding/calify-app-icon.svg" alt="Calify app icon — Cool Academic" width="155" />
+  <!-- Original selected PNG pending binary publication in assets/branding/official/app-icon.png. -->
   <p><strong>Cool Academic</strong> · Midnight Navy · Teal · Cyan</p>
 </div>
 
@@ -64,9 +62,9 @@ Calify uses the selected **Option 01 — Cool Academic** visual direction: a com
 </table>
 </div>
 
-[**Brand Guidelines**](assets/branding/README.md) · [**App Icon**](assets/branding/calify-app-icon.svg) · [**Logo Variations**](assets/branding/calify-logo-monochrome.svg) · [**Design Tokens**](assets/branding/design-tokens.json)
+[**Brand Guidelines**](assets/branding/README.md) · [**Design Tokens**](assets/branding/design-tokens.json)
 
-> **Design status:** Vector artwork in this repository is an editable interpretation of the approved branding concept. Product UI previews are conceptual; no web/mobile app UI has been released.
+> **Brand source of truth:** the original `Option_01_Cool_Academic.zip` selected by the project owner. Earlier vector reinterpretations were incorrect and have been withdrawn. Original PNG and PDF assets must be uploaded without redrawing; they are not yet in this public repository. Product UI previews remain conceptual.
 
 ## ✨ Calify V1 — Core Capabilities
 
@@ -139,7 +137,7 @@ calify/
 ├── config/
 │   └── examples/              # Safe configuration examples (future)
 ├── assets/
-│   ├── branding/              # Selected logo, app icon, banner and tokens
+│   ├── branding/              # Approved brand specification; original raster files pending upload
 │   ├── diagrams/              # Public architecture diagrams
 │   └── screenshots/           # Verified demo screenshots (future)
 ├── docs/
