@@ -37,6 +37,10 @@ Create one Markdown note per topic using the following template:
 - Never use real production tokens, endpoints, spreadsheet IDs, or actual student records in examples.
 - Prefer small, testable commits and link them from the learning notes.
 
+## Available lessons
+
+- [Lesson 01 — JavaScript, JSON, and Input Validation](phase-00/01-javascript-json-and-validation.md)
+
 ## Initial study queue
 
 - [ ] JavaScript objects, arrays, functions and scope.
