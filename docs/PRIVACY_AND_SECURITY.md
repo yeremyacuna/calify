@@ -4,7 +4,7 @@
 
 ## Scope and Licensing
 
-This document describes privacy safeguards and safe vulnerability-reporting practices. It is **not** a software license and does not grant redistribution rights. The licensing decision is tracked in [Licensing Options](LICENSING.md).
+This document describes privacy safeguards and vulnerability-reporting practices; it is **not** the license text. The public Calify repository uses the [GNU General Public License v3.0](../LICENSE), with additional practical guidance in the [Licensing Guide](LICENSING.md). The license covers only material to which its authors have applied it; it does not publish or grant access to private deployments, credentials, or student records.
 
 ## What Must Never Be Published
 

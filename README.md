@@ -11,8 +11,9 @@
 [![Project Status](https://img.shields.io/badge/status-V1%20documented-10B981?style=for-the-badge)](docs/ROADMAP.md)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Google%20Workspace-2563EB?style=for-the-badge&logo=apple&logoColor=white)](#-tech-stack)
 [![Public Release](https://img.shields.io/badge/public%20release-not%20available-64748B?style=for-the-badge)](#-getting-started)
+[![GPLv3](https://img.shields.io/badge/license-GPLv3-3DA639?style=for-the-badge&logo=gnu&logoColor=white)](LICENSE)
 
-[**Architecture**](docs/ARCHITECTURE.md) · [**Roadmap**](docs/ROADMAP.md) · [**iOS V2 Design**](docs/design/IOS_SHORTCUT_V2.md) · [**Security**](docs/PRIVACY_AND_SECURITY.md) · [**Releases**](https://github.com/yeremyacuna/calify/releases)
+[**Architecture**](docs/ARCHITECTURE.md) · [**Roadmap**](docs/ROADMAP.md) · [**iOS V2 Design**](docs/design/IOS_SHORTCUT_V2.md) · [**Security**](docs/PRIVACY_AND_SECURITY.md) · [**License**](LICENSE) · [**Releases**](https://github.com/yeremyacuna/calify/releases)
 
 </div>
 
@@ -163,7 +164,7 @@ Calify follows a privacy-first approach. The public repository must never includ
 <tr><td align="center"><a href="docs/design/IOS_SHORTCUT_V2.md">iOS Shortcut V2 Design</a></td><td align="center">Proposed UX and server integration</td></tr>
 <tr><td align="center"><a href="docs/PRIVACY_AND_SECURITY.md">Privacy &amp; Security Guidelines</a></td><td align="center">Privacy, source publication and responsible reports</td></tr>
 <tr><td align="center"><a href="docs/BRANCHING_STRATEGY.md">Branching Strategy</a></td><td align="center">Main branch, V2 branch, feature branches and releases</td></tr>
-<tr><td align="center"><a href="docs/LICENSING.md">Licensing Options</a></td><td align="center">Distribution rights and liability disclaimer differences</td></tr>
+<tr><td align="center"><a href="docs/LICENSING.md">GPLv3 Licensing Guide</a></td><td align="center">Copyleft, source distribution, attribution, and warranty terms</td></tr>
 </tbody>
 </table>
 </div>
@@ -177,7 +178,7 @@ Code contributions will open after a reviewed public source baseline and contrib
 
 ## 📄 License
 
-**Licensing decision pending.** The repository contains planning documentation; no personal production code is released. See [Licensing Options](docs/LICENSING.md) for the difference between permissive reuse and restrictions on redistributing copies.
+**Calify is licensed under the [GNU General Public License v3.0 (GPL-3.0-only)](LICENSE).** Publicly released covered works may be used, modified, and redistributed under GPLv3 terms, including the obligation to provide corresponding source for distributed derivative versions. There is **no warranty**, subject to applicable law. GPLv3 permits forks and commercial redistribution; it does **not** prohibit cloning. The working personal Shortcut, unpublished production backend, user data, and credentials are **not included in this release**. See the [Licensing Guide](docs/LICENSING.md) for scope and compliance.
 
 ---
 
@@ -185,6 +186,6 @@ Code contributions will open after a reviewed public source baseline and contrib
 
 **Calify — Learn more. Track better.**
 
-Built by [@yeremyacuna](https://github.com/yeremyacuna) · Software engineering & practical automation
+Copyright © 2026 Yeremy Acuña ([@yeremyacuna](https://github.com/yeremyacuna)) · Licensed under [GNU GPLv3](LICENSE)
 
 </div>
