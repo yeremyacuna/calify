@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/branding/official/wordmark-crop.png" alt="Calify official layered C symbol and wordmark — Cool Academic" width="315" />
+<img src="assets/branding/official/calify-logo-transparent.svg" alt="Official Calify logo with transparent background" width="315" />
 
 # Calify
 
@@ -26,7 +26,6 @@
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
-- [Brand Identity](#-brand-identity)
 - [V1 Core Capabilities](#-calify-v1--core-capabilities)
 - [Architecture](#️-architecture)
 - [Tech Stack](#️-tech-stack)
@@ -47,36 +46,6 @@ Calify V1 is currently used as a functional personal iOS-to-Google-Workspace wor
 
 > [!IMPORTANT]
 > **Project status:** this public repository currently contains documentation and a future-facing project scaffold—not an installable release. The functioning personal Shortcut, its credentials, personal trackers, and unreviewed production code are **not published** here.
-
-## 🎨 Brand Identity
-
-<div align="center">
-  <a href="assets/branding/official/app-icon.png"><img src="assets/branding/official/app-icon.png" alt="Original Calify Option 01 app icon" width="155" /></a>
-  <p><strong>Cool Academic</strong> · Midnight Navy · Teal · Cyan</p>
-</div>
-
-Calify uses the selected **Option 01 — Cool Academic** visual direction: a composed educational identity combining trust, clarity and measurable progress. Its design system specifies **Plus Jakarta Sans** for headings and **Inter** for body text, with a consistent 8 px spacing rhythm.
-
-<div align="center">
-<table align="center">
-<thead><tr><th align="center">Midnight Navy</th><th align="center">Teal</th><th align="center">Cyan</th><th align="center">Soft White</th><th align="center">Slate</th></tr></thead>
-<tbody><tr><td align="center"><code>#0B1F3B</code></td><td align="center"><code>#14B8A6</code></td><td align="center"><code>#38BDF8</code></td><td align="center"><code>#F8FAFC</code></td><td align="center"><code>#64748B</code></td></tr></tbody>
-</table>
-</div>
-
-[**Brand Guidelines**](assets/branding/README.md) · [**Original PDF**](assets/branding/reference/brand-guidelines.pdf) · [**Design Tokens**](assets/branding/design-tokens.json) · [**Asset Integrity**](assets/branding/ORIGINAL_ASSET_MANIFEST.json)
-
-> **Official branding:** these images are the original Option 01 artwork approved by the project owner, published without redrawing. The wordmark is a pixel crop from the same approved branding board. Preview screens and wireframes are **design concepts**, not screenshots of released Calify functionality.
-
-### Design References
-
-<div align="center">
-  <a href="assets/branding/reference/branding-board.png"><img src="assets/branding/reference/branding-board.png" alt="Approved Calify Option 01 branding board: logo, colors, typography, and concept screens" width="430" /></a>
-  <a href="assets/branding/reference/wireframes-detailed.png"><img src="assets/branding/reference/wireframes-detailed.png" alt="Conceptual Calify mobile UX wireframes, not a shipping application screenshot" width="430" /></a>
-  <p><sub>Official brand board · Conceptual UX wireframes — click to view originals</sub></p>
-</div>
-
-These references support future design decisions; they do not represent released iOS or web screens.
 
 ## ✨ Calify V1 — Core Capabilities
 
@@ -149,7 +118,7 @@ calify/
 ├── config/
 │   └── examples/              # Safe configuration examples (future)
 ├── assets/
-│   ├── branding/              # Original selected brand assets and design system
+│   ├── branding/              # Official logo/banner and internal design resources
 │   │   ├── official/          # App icon, illustrated banner and wordmark crop
 │   │   ├── reference/         # Branding board, wireframes and PDF guidelines
 │   │   ├── design-tokens.json
@@ -208,7 +177,6 @@ Calify follows a privacy-first approach. The public repository must never includ
 <table align="center">
 <thead><tr><th align="center">Document</th><th align="center">Purpose</th></tr></thead>
 <tbody>
-<tr><td align="center"><a href="assets/branding/README.md">Brand Guidelines</a></td><td align="center">Visual identity, palette, typography and source assets</td></tr>
 <tr><td align="center"><a href="docs/ARCHITECTURE.md">Architecture</a></td><td align="center">V1 baseline, V2 target, diagrams, data rules</td></tr>
 <tr><td align="center"><a href="docs/ROADMAP.md">Roadmap</a></td><td align="center">Milestones, release gates and required learning</td></tr>
 <tr><td align="center"><a href="docs/design/IOS_SHORTCUT_V2.md">iOS Shortcut V2 Design</a></td><td align="center">Proposed UX and server integration</td></tr>
