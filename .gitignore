@@ -1,0 +1,26 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.clasprc.json
+.clasp.json
+**/secrets.*
+**/*.pem
+**/*.key
+**/*credentials*.json
+
+# Private Shortcut exports and academic data
+*.shortcut
+*.wflow
+*_private.*
+private/
+backups/
+*.xlsx
+
+# Tooling and build outputs
+node_modules/
+dist/
+coverage/
+.DS_Store
+__pycache__/
+*.pyc
