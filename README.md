@@ -6,7 +6,7 @@
 
 **Status:** V1 recovery and V2 planning · **Public release:** not yet available
 
-[Roadmap](docs/ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md) · [Shortcut audit](docs/audits/SHORTCUT_V1.md) · [Learning path](docs/learning/README.md) · [Security](SECURITY.md)
+[Roadmap](docs/ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md) · [Shortcut audit](docs/audits/SHORTCUT_V1.md) · [iOS V2 design](docs/SHORTCUT_V2_DESIGN.md) · [Learning path](docs/learning/README.md) · [Security](SECURITY.md)
 
 </div>
 
@@ -95,6 +95,7 @@ Installation instructions will be published after the backend and Shortcut have 
 - [V2 roadmap and acceptance criteria](docs/ROADMAP.md)
 - [System architecture](docs/ARCHITECTURE.md)
 - [V1 Shortcut audit](docs/audits/SHORTCUT_V1.md)
+- [Proposed iOS Shortcut V2 design](docs/SHORTCUT_V2_DESIGN.md)
 - [Learning notes and study workflow](docs/learning/README.md)
 - [Security policy](SECURITY.md)
 
