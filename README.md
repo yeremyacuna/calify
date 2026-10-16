@@ -97,6 +97,7 @@ Installation instructions will be published after the backend and Shortcut have 
 - [V1 Shortcut audit](docs/audits/SHORTCUT_V1.md)
 - [Proposed iOS Shortcut V2 design](docs/SHORTCUT_V2_DESIGN.md)
 - [Learning notes and study workflow](docs/learning/README.md)
+- [Lesson 01 — JavaScript, JSON, and Input Validation](docs/learning/phase-00/01-javascript-json-and-validation.md)
 - [Security policy](SECURITY.md)
 
 ## Branding
