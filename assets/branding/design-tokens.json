@@ -18,6 +18,6 @@
     "cardRadius": 16,
     "touchTargetMin": 44
   },
-  "source": "Option_01_Cool_Academic.zip (original user-approved design files)",
-  "disclaimer": "Colors and font choices are design specifications, not pixel measurements of generated raster concept artwork."
+  "disclaimer": "Color and typography tokens are recommended design specifications; generated imagery is conceptual and may differ in pixel colors.",
+  "source": "Option_01_Cool_Academic.zip (user-provided original)"
 }

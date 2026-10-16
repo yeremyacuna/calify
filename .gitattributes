@@ -1,0 +1,3 @@
+# Treat approved visual files as binary assets in Git diff.
+*.png binary
+*.pdf binary

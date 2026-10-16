@@ -1,0 +1,37 @@
+{
+  "origin": "Option_01_Cool_Academic.zip",
+  "unmodified_files": [
+    "assets/branding/official/app-icon.png",
+    "assets/branding/official/readme-banner.png",
+    "assets/branding/reference/branding-board.png",
+    "assets/branding/reference/wireframes-detailed.png",
+    "assets/branding/reference/brand-guidelines.pdf"
+  ],
+  "derived_crop": "assets/branding/official/wordmark-crop.png (crop only from original branding-board.png; pixels not recolored)",
+  "files": {
+    "assets/branding/official/app-icon.png": {
+      "sha256": "35104b0818d4e2495629a1204e638b1602e58e3e5bba1453f68e137b268afbd7",
+      "bytes": 1522244
+    },
+    "assets/branding/official/readme-banner.png": {
+      "sha256": "0109d1505727f7f7f907a282d09ae7e79d8bbcb51cab82ec5732102ef9246b2a",
+      "bytes": 1484373
+    },
+    "assets/branding/official/wordmark-crop.png": {
+      "sha256": "0c4def2eefc1f74c6439e829415c23bb9a61ec731746b15c06764690b7de6e8f",
+      "bytes": 67031
+    },
+    "assets/branding/reference/branding-board.png": {
+      "sha256": "1f079cea7216e6f266e2c33dcf7e989baea064e3ad577a8a58eaadc1fa1b4772",
+      "bytes": 1581203
+    },
+    "assets/branding/reference/wireframes-detailed.png": {
+      "sha256": "8b0d84ac282f66d1951552d64111185f466f2431a25b2706fd0537bc6ed1747b",
+      "bytes": 144823
+    },
+    "assets/branding/reference/brand-guidelines.pdf": {
+      "sha256": "b0fd038b345f75c4c82d0cfa1ca64913c3344f8eb62dc9d66046e651714d5aef",
+      "bytes": 2297548
+    }
+  }
+}
