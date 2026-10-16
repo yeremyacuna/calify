@@ -94,4 +94,4 @@ Before implementation, verify against **active Production**:
 
 The active original Shortcut and its backup stay unchanged. No sanitized public artifact is approved until the complete action audit, sensitive-value replacement, backend security testing, import validation, and real-device regression are done.
 
-**Related documents:** [Architecture](../ARCHITECTURE.md) · [Roadmap](../ROADMAP.md) · [Security](../SECURITY.md).
+**Related documents:** [Architecture](../ARCHITECTURE.md) · [Roadmap](../ROADMAP.md) · [Security](../PRIVACY_AND_SECURITY.md).

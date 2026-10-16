@@ -114,7 +114,9 @@ calify/
 │   ├── sheets/
 │   ├── ARCHITECTURE.md
 │   ├── ROADMAP.md
-│   └── SECURITY.md
+│   ├── PRIVACY_AND_SECURITY.md
+│   ├── BRANCHING_STRATEGY.md
+│   └── LICENSING.md
 ├── infra/
 │   └── apps-script/           # Deployment configuration (future)
 ├── scripts/                   # Maintenance tooling (future)
