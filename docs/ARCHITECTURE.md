@@ -2,11 +2,15 @@
 
 > **Evidence labels:** **Verified V1** means established integration or reviewed historical source. **Production inspection pending** means behavior has not been confirmed in the active modular codebase. **V2 proposal** describes a target, not a shipped feature.
 
-## System Overview
+## System Overview — Calify V1
 
-![Calify system architecture](../assets/diagrams/system-overview.svg)
+<div align="center">
+<img src="../assets/diagrams/system-overview.svg" width="760" alt="Vertical Calify V1 system architecture diagram" />
+</div>
 
-## V1 — Existing Personal System
+**Diagram type:** High-Level System Architecture / Component Diagram. It maps **Mobile Client → Web API → Data Layer**. A Web App backend exists in V1, but a separate web UI does not.
+
+## V1 — Existing System
 
 ```mermaid
 flowchart TD
@@ -21,16 +25,24 @@ flowchart TD
     class A,B,C active
 ```
 
+**Diagram type:** Data Flow / Component Dependency Diagram. Arrows identify how data enters the tracker and how Grade Entry and Settings contribute to Control calculations and Dashboard output.
+
 The live personal setup and seven known trackers were inspected at the sheet/metadata level. This document does not claim that the original signed Shortcut's individual actions or the current Production source modules have been fully decoded.
 
 ### Academic Tracker Contract
 
-| Position | Sheet | Responsibility |
-|:--------:|:-----:|:--------------:|
-| 1 | `Dashboard` | Display current status and grade projections |
-| 2 | `Grade Entry` | Preserve assessment records and actual scores |
-| 3 | `Control` | Compute results using verified course rules |
-| 4 | `Settings` | Hold weights, configurations and grading parameters |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Position</th><th align="center">Sheet</th><th align="center">Responsibility</th></tr></thead>
+<tbody>
+<tr><td align="center">1</td><td align="center"><code>Dashboard</code></td><td align="center">Display current status and grade projections</td></tr>
+<tr><td align="center">2</td><td align="center"><code>Grade Entry</code></td><td align="center">Preserve assessment records and actual scores</td></tr>
+<tr><td align="center">3</td><td align="center"><code>Control</code></td><td align="center">Compute results using verified course rules</td></tr>
+<tr><td align="center">4</td><td align="center"><code>Settings</code></td><td align="center">Hold weights, configurations and grading parameters</td></tr>
+</tbody>
+</table>
+</div>
+
 
 The ledger comprises fourteen columns (A–N). The academic model distinguishes pending scores from legitimate zeros, actual earned results from projections, and scoring activities from completion-only activities. Some course headers and evaluation rules differ; adapters must not assume identical schemas merely from visual similarities.
 
@@ -61,6 +73,8 @@ flowchart TD
     class IOS,WEB,API,AUTH,SERVICE,ADAPTER,DATA,LOG planned
 ```
 
+**Diagram type:** Proposed Logical Component Diagram. The V2 flow above is an architectural proposal, not an already deployed web client or API contract.
+
 ### Public Distribution Model
 
 **First target:** a self-hosted edition where students own their Google Sheet(s), deployment, and configuration. The maintainer's production API and personal trackers must never become shared public infrastructure.
@@ -68,6 +82,8 @@ flowchart TD
 **Later possibility:** hosted multi-user service with separate identity, authorization, storage isolation and operational controls. This is a separate architectural decision, not a dependency of the initial public edition.
 
 ## Security Boundaries
+
+**Diagram type:** **UML Sequence Diagram**, written with Mermaid `sequenceDiagram`. Time progresses top-to-bottom, showing messages between participants and alternative responses.
 
 ```mermaid
 sequenceDiagram

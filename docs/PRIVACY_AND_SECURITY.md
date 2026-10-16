@@ -1,10 +1,10 @@
-# 🔐 Calify — Security & Privacy Policy
+# 🔐 Calify — Privacy & Security Guidelines
 
 > **Current scope:** documentation-only public repository. There is no publicly supported executable release yet.
 
-## Security Policy vs. License
+## Scope and Licensing
 
-This file defines how to handle sensitive information and report potential security problems. It is **not** an open-source license. The repository license will be defined separately once distribution decisions are finalized.
+This document describes privacy safeguards and safe vulnerability-reporting practices. It is **not** a software license and does not grant redistribution rights. The licensing decision is tracked in [Licensing Options](LICENSING.md).
 
 ## What Must Never Be Published
 

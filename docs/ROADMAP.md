@@ -13,6 +13,8 @@
 
 ## Delivery Map
 
+**Diagram type:** Roadmap Dependency Flowchart (`flowchart LR`): left-to-right arrows express planned phase ordering rather than completed deliverables.
+
 ```mermaid
 flowchart LR
     A["00 · Recover V1"] --> B["01 · Source control"]
@@ -31,31 +33,45 @@ flowchart LR
 
 ## Milestones
 
-| Phase | Engineering Scope | Learning Focus | Status |
-|:-----:|:-----------------:|:--------------:|:------:|
-| **00 — Recovery** | Read-only inventory of current Shortcut and Production source | JavaScript, Apps Script, HTTP/JSON | In progress |
-| **01 — Repository** | Git layout, documentation, safe source imports, Git workflow | Git, branch, PR, Conventional Commits, clasp | In progress |
-| **02 — Backend** | Validation, state transitions, duplicates, identity, security, error handling | Unit tests, idempotency, API design | Planned |
-| **03 — CI/CD** | Staging, automated tests, release gates, rollback | GitHub Actions, pipelines, deployments | Planned |
-| **04 — Public Setup** | User-owned sheets and API setup without shared credentials | Configuration, auth, least privilege | Planned |
-| **05 — iOS V2** | New client flow, preview, confirmation, error recovery | UX, Shortcuts, client/server boundaries | Planned |
-| **06 — Web/PWA** | Responsive client consuming reviewed API | Frontend, accessibility, web APIs | Planned |
-| **07 — Release** | Documentation, integration tests, signed distributables | QA, release notes, versioning | Planned |
-| **08 — Multi-user** | Research hosted services, identity, isolation, storage | Scalable system architecture | Optional |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Phase</th><th align="center">Engineering Scope</th><th align="center">Learning Focus</th><th align="center">Status</th></tr></thead>
+<tbody>
+<tr><td align="center"><strong>00 — Recovery</strong></td><td align="center">Read-only inventory of current Shortcut and Production source</td><td align="center">JavaScript, Apps Script, HTTP/JSON</td><td align="center">In progress</td></tr>
+<tr><td align="center"><strong>01 — Repository</strong></td><td align="center">Git layout, documentation, safe source imports, Git workflow</td><td align="center">Git, branch, PR, Conventional Commits, clasp</td><td align="center">In progress</td></tr>
+<tr><td align="center"><strong>02 — Backend</strong></td><td align="center">Validation, state transitions, duplicates, identity, security, error handling</td><td align="center">Unit tests, idempotency, API design</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>03 — CI/CD</strong></td><td align="center">Staging, automated tests, release gates, rollback</td><td align="center">GitHub Actions, pipelines, deployments</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>04 — Public Setup</strong></td><td align="center">User-owned sheets and API setup without shared credentials</td><td align="center">Configuration, auth, least privilege</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>05 — iOS V2</strong></td><td align="center">New client flow, preview, confirmation, error recovery</td><td align="center">UX, Shortcuts, client/server boundaries</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>06 — Web/PWA</strong></td><td align="center">Responsive client consuming reviewed API</td><td align="center">Frontend, accessibility, web APIs</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>07 — Release</strong></td><td align="center">Documentation, integration tests, signed distributables</td><td align="center">QA, release notes, versioning</td><td align="center">Planned</td></tr>
+<tr><td align="center"><strong>08 — Multi-user</strong></td><td align="center">Research hosted services, identity, isolation, storage</td><td align="center">Scalable system architecture</td><td align="center">Optional</td></tr>
+</tbody>
+</table>
+</div>
+
 
 ## Quality Gates
 
-| Gate | Required Evidence |
-|:----:|:-----------------:|
-| Privacy | Secret scan and privacy review of every publishable artifact |
-| Integrity | Pending vs score 0 tested; completed grade protection and duplicate requests |
-| Academic correctness | Course-specific rules and weighted projections validated |
-| Compatibility | Existing V1 remains available and unaffected |
-| Operations | Isolated staging, controlled production deploys and rollback |
-| UX | Real-device Shortcut test; public demo installation with synthetic data |
-| Documentation | README, API contract, changelog and accurate release status |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Gate</th><th align="center">Required Evidence</th></tr></thead>
+<tbody>
+<tr><td align="center">Privacy</td><td align="center">Secret scan and privacy review of every publishable artifact</td></tr>
+<tr><td align="center">Integrity</td><td align="center">Pending vs score 0 tested; completed grade protection and duplicate requests</td></tr>
+<tr><td align="center">Academic correctness</td><td align="center">Course-specific rules and weighted projections validated</td></tr>
+<tr><td align="center">Compatibility</td><td align="center">Existing V1 remains available and unaffected</td></tr>
+<tr><td align="center">Operations</td><td align="center">Isolated staging, controlled production deploys and rollback</td></tr>
+<tr><td align="center">UX</td><td align="center">Real-device Shortcut test; public demo installation with synthetic data</td></tr>
+<tr><td align="center">Documentation</td><td align="center">README, API contract, changelog and accurate release status</td></tr>
+</tbody>
+</table>
+</div>
+
 
 ## Release Strategy
+
+**Diagram type:** Release Process Flowchart (`flowchart TD`): decision nodes represent validation and approval gates before any deployment.
 
 ```mermaid
 flowchart TD
@@ -76,6 +92,15 @@ The production environment must never be overwritten simply because a GitHub com
 ## Learning Contract (private track)
 
 Each phase has a corresponding **private Learning Notes** track: a concise concept explanation, a self-contained example, exercises, Calify application, test cases, and a reflection linked to a reviewed commit. Personal study notes are not part of the public end-user repository.
+
+## Branching Convention
+
+- `main`: public documentation baseline and reviewed stable releases; no separate `v1` branch is required.
+- `v2`: long-lived integration branch for Calify V2 development. Changes land through reviewed Pull Requests.
+- `feature/v2-*` and `fix/v2-*`: short-lived working branches created from `v2`.
+- Merge `v2` into `main` only after testing, privacy review, approval, and a versioned release.
+
+See [Branching Strategy](BRANCHING_STRATEGY.md) for examples and release workflow.
 
 ## Architecture Decisions
 

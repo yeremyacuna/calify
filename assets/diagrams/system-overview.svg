@@ -1,25 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc">
-<title id="title">Calify V1 architecture and Calify V2 proposal</title>
-<desc id="desc">The existing personal iOS Shortcut communicates through HTTP and JSON with a Google Apps Script API and Google Sheets trackers. The proposed V2 adds a web client, validated API contract, and independently owned trackers.</desc>
-<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#F2F7FF"/><stop offset="1" stop-color="#EEF6FA"/></linearGradient><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#457B9D"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1010" viewBox="0 0 820 1010" role="img" aria-labelledby="title desc">
+<title id="title">Calify V1 — Vertical System Architecture</title>
+<desc id="desc">Top-down black-and-white architecture diagram showing Apple Shortcuts Mobile Client, HTTPS JSON, Google Apps Script Web API, Google Sheets Data Layer, Grade Entry and Settings feeding Control calculations and Dashboard output.</desc>
 <style>
-.head{font:700 17px Arial,sans-serif;fill:#17324D}.sub{font:13px Arial,sans-serif;fill:#52687C}.section{font:700 22px Arial,sans-serif;fill:#17324D}.tag{font:700 12px Arial,sans-serif;letter-spacing:1px;fill:#009688}
+  .stroke{stroke:#202020;stroke-width:2;fill:none}
+  .thin{stroke:#505050;stroke-width:1.6;fill:none}
+  .primary{fill:#161616;font:700 25px Arial,Helvetica,sans-serif}
+  .label{fill:#161616;font:700 18px Arial,Helvetica,sans-serif}
+  .meta{fill:#505050;font:14px Arial,Helvetica,sans-serif}
+  .small{fill:#505050;font:12px Arial,Helvetica,sans-serif;letter-spacing:1px}
+  @media(prefers-color-scheme:dark){
+    .stroke{stroke:#F0F0F0}
+    .thin{stroke:#C9C9C9}
+    .primary,.label{fill:#FAFAFA}
+    .meta,.small{fill:#D0D0D0}
+  }
 </style>
-<rect width="1200" height="610" rx="20" fill="url(#bg)"/>
-<text class="section" x="52" y="55">Personal V1 — existing integration</text><text class="tag" x="52" y="78">CURRENT</text>
-<rect x="55" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="210" y="147" class="head" text-anchor="middle">Apple Shortcuts</text><text x="210" y="172" class="sub" text-anchor="middle">Personal iOS workflow</text>
-<rect x="445" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="600" y="147" class="head" text-anchor="middle">Google Apps Script</text><text x="600" y="172" class="sub" text-anchor="middle">API web application</text>
-<rect x="835" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="990" y="147" class="head" text-anchor="middle">Google Sheets</text><text x="990" y="172" class="sub" text-anchor="middle">Private course trackers</text>
-<path d="M 365 157 L 445 157" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 755 157 L 835 157" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/>
-<text class="sub" x="402" y="132" text-anchor="middle">HTTP</text><text class="sub" x="795" y="132" text-anchor="middle">Data</text>
-<rect x="55" y="222" width="1090" height="50" rx="12" fill="#E3EDF7"/>
-<text class="sub" x="600" y="252" text-anchor="middle">Dashboard  |  Grade Entry  |  Control  |  Settings</text>
-<path d="M 45 302 L1155 302" stroke="#C5D3E0" stroke-width="2"/>
-<text class="section" x="52" y="349">Calify V2 — proposed architecture</text><text class="tag" x="52" y="372">PLANNED</text>
-<rect x="55" y="403" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="165" y="438" class="head" text-anchor="middle">iOS Shortcut V2</text><text x="165" y="463" class="sub" text-anchor="middle">Guided setup</text>
-<rect x="55" y="520" width="220" height="67" rx="16" fill="#FFFFFF" stroke="#7E57C2" stroke-width="2"/><text x="165" y="555" class="head" text-anchor="middle">Web / PWA</text><text x="165" y="580" class="sub" text-anchor="middle">Cross-platform client</text>
-<rect x="355" y="438" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="465" y="473" class="head" text-anchor="middle">API Contract</text><text x="465" y="498" class="sub" text-anchor="middle">Validation and auth</text>
-<rect x="655" y="438" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="765" y="473" class="head" text-anchor="middle">Backend Services</text><text x="765" y="498" class="sub" text-anchor="middle">Grade operations</text>
-<rect x="955" y="438" width="195" height="100" rx="16" fill="#FFFFFF" stroke="#009688" stroke-width="2"/><text x="1052.5" y="473" class="head" text-anchor="middle">Google Sheets</text><text x="1052.5" y="498" class="sub" text-anchor="middle">User-owned trackers</text>
-<path d="M 275 453 L 355 469" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 275 553 L 355 510" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 575 488 L 655 488" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 875 488 L 955 488" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L7,3.5 L0,7" class="stroke" />
+  </marker>
+</defs>
+<text x="410" y="52" class="primary" text-anchor="middle">CALIFY V1</text>
+<text x="410" y="77" class="meta" text-anchor="middle">High-Level System Architecture · Current Integration</text>
+<text x="410" y="117" class="small" text-anchor="middle">MOBILE CLIENT</text>
+<rect x="170" y="133" width="480" height="98" rx="18" class="stroke"/>
+<text x="410" y="174" class="label" text-anchor="middle">Apple Shortcuts</text>
+<text x="410" y="203" class="meta" text-anchor="middle">iOS · Course selection and score entry</text>
+<path d="M410 232 V308" class="stroke" marker-end="url(#arrow)"/>
+<text x="432" y="269" class="meta">HTTPS / JSON</text>
+<text x="410" y="352" class="small" text-anchor="middle">WEB API · SERVER-SIDE</text>
+<rect x="170" y="368" width="480" height="98" rx="18" class="stroke"/>
+<text x="410" y="409" class="label" text-anchor="middle">Google Apps Script</text>
+<text x="410" y="438" class="meta" text-anchor="middle">Web App · API and assessment services</text>
+<path d="M410 467 V531" class="stroke" marker-end="url(#arrow)"/>
+<text x="432" y="506" class="meta">Read / write</text>
+<text x="410" y="571" class="small" text-anchor="middle">DATA LAYER</text>
+<rect x="170" y="586" width="480" height="80" rx="18" class="stroke"/>
+<text x="410" y="620" class="label" text-anchor="middle">Google Sheets</text>
+<text x="410" y="644" class="meta" text-anchor="middle">Course-specific grade tracker</text>
+<path d="M410 667 V690" class="thin"/>
+<path d="M239 690 H581" class="thin"/>
+<path d="M239 690 V711" class="thin" marker-end="url(#arrow)"/>
+<path d="M581 690 V711" class="thin" marker-end="url(#arrow)"/>
+<rect x="98" y="725" width="281" height="75" rx="14" class="stroke"/>
+<rect x="441" y="725" width="281" height="75" rx="14" class="stroke"/>
+<text x="238" y="756" class="label" text-anchor="middle">Grade Entry</text>
+<text x="238" y="780" class="meta" text-anchor="middle">Assessment records</text>
+<text x="582" y="756" class="label" text-anchor="middle">Settings</text>
+<text x="582" y="780" class="meta" text-anchor="middle">Course-specific rules</text>
+<path d="M238 801 V825 H410" class="thin"/>
+<path d="M582 801 V825 H410" class="thin"/>
+<path d="M410 825 V842" class="thin" marker-end="url(#arrow)"/>
+<rect x="257" y="850" width="306" height="58" rx="12" class="stroke"/>
+<text x="410" y="883" class="label" text-anchor="middle">Control · Calculations</text>
+<path d="M410 908 V930" class="thin" marker-end="url(#arrow)"/>
+<rect x="257" y="940" width="306" height="54" rx="12" class="stroke"/>
+<text x="410" y="972" class="label" text-anchor="middle">Dashboard · Results</text>
 </svg>

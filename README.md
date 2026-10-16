@@ -4,15 +4,15 @@
 
 # Calify
 
-### Privacy-first academic grade tracking & smart automation
+### Academic grade tracking powered by iOS automation and Google Workspace
 
-**Record assessments, understand your progress, and keep control of your own academic data.**
+**Record academic assessments, automate grade entry, and visualize course progress.**
 
-[![Project Status](https://img.shields.io/badge/status-V2%20planning-F59E0B?style=for-the-badge)](docs/ROADMAP.md)
+[![Project Status](https://img.shields.io/badge/status-V1%20documented-10B981?style=for-the-badge)](docs/ROADMAP.md)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Google%20Workspace-2563EB?style=for-the-badge&logo=apple&logoColor=white)](#-tech-stack)
 [![Public Release](https://img.shields.io/badge/public%20release-not%20available-64748B?style=for-the-badge)](#-getting-started)
 
-[**Architecture**](docs/ARCHITECTURE.md) · [**Roadmap**](docs/ROADMAP.md) · [**iOS V2 Design**](docs/design/IOS_SHORTCUT_V2.md) · [**Security**](docs/SECURITY.md) · [**Releases**](https://github.com/yeremyacuna/calify/releases)
+[**Architecture**](docs/ARCHITECTURE.md) · [**Roadmap**](docs/ROADMAP.md) · [**iOS V2 Design**](docs/design/IOS_SHORTCUT_V2.md) · [**Security**](docs/PRIVACY_AND_SECURITY.md) · [**Releases**](https://github.com/yeremyacuna/calify/releases)
 
 </div>
 
@@ -22,31 +22,38 @@
 
 **Calify** is an independent software engineering project that connects **Apple Shortcuts**, a **Google Apps Script API**, and **Google Sheets** to simplify academic assessment tracking.
 
-Its existing **personal V1** supports a real iOS-driven tracking workflow. The **V2 roadmap** focuses on reliability, secure configuration, an improved Shortcut experience, a self-hosted edition that other students can configure, and a possible cross-platform web/PWA client.
+Calify V1 is currently used as a functional personal iOS-to-Google-Workspace workflow. This repository documents the existing architecture while preparing a secure, reusable public distribution. Future features are documented separately in the [engineering roadmap](docs/ROADMAP.md).
 
 > [!IMPORTANT]
 > **Project status:** this public repository currently contains documentation and a future-facing project scaffold—not an installable release. The functioning personal Shortcut, its credentials, personal trackers, and unreviewed production code are **not published** here.
 
-## ✨ Project Capabilities
+## ✨ Calify V1 — Core Capabilities
 
-| Existing personal V1 | Planned Calify V2 |
-|:---:|:---:|
-| iOS Shortcut workflow | Guided Shortcut onboarding and improved UX |
-| Google Apps Script backend | Audited, versioned API with stronger validation |
-| Google Sheets grade tracking | Safe reusable tracker configuration |
-| Course-specific grading calculations | Idempotent writes and staging tests |
-| Grade entry and progress dashboards | Web/PWA client after backend stabilization |
-| Personal production deployment | Reproducible public self-hosted installation |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Component</th><th align="center">Existing Functionality</th></tr></thead>
+<tbody>
+<tr><td align="center"><strong>Mobile Client</strong></td><td align="center">Apple Shortcuts workflow for personal grade recording</td></tr>
+<tr><td align="center"><strong>Web API</strong></td><td align="center">Google Apps Script endpoint handling JSON requests</td></tr>
+<tr><td align="center"><strong>Academic Data</strong></td><td align="center">Google Sheets trackers with course-specific grading rules</td></tr>
+<tr><td align="center"><strong>Grade Entry</strong></td><td align="center">Score recording and completion-based assessments</td></tr>
+<tr><td align="center"><strong>Analytics</strong></td><td align="center">Calculated academic results and Dashboard summaries</td></tr>
+</tbody>
+</table>
+</div>
 
-**Existing** does not imply publicly downloadable. **Planned** means not shipped.
+
+The current personal workflow exists; its source code and original Shortcut are not public distribution artifacts.
 
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="assets/diagrams/system-overview.svg" alt="Diagram showing Calify personal V1 architecture and the proposed V2 architecture" width="100%" />
+  <img src="assets/diagrams/system-overview.svg" alt="Calify V1 vertical architecture: iOS mobile client, Apps Script web API, and Google Sheets grade tracking" width="760" />
 </div>
 
-The personal tracker schema uses four worksheets, in this order: **Dashboard → Grade Entry → Control → Settings**. The grading engine must respect each course's distinct evaluation rules, never substitute projections for actual results, and preserve a legitimate **zero** grade.
+**Diagram type:** High-level System Architecture / Component Diagram (top-down). **Mobile** refers to the Apple Shortcuts iOS client; **Web API** refers to the server-side Google Apps Script Web App—not a separate browser frontend.
+
+Each tracker uses four worksheets: **Dashboard → Grade Entry → Control → Settings**. Course-specific formulas distinguish pending scores from legitimate zero scores and actual results from projections.
 
 📄 [Explore the detailed architecture and Mermaid diagrams](docs/ARCHITECTURE.md)
 
@@ -54,17 +61,23 @@ The personal tracker schema uses four worksheets, in this order: **Dashboard →
 
 <div align="center">
 
-| **Current Integration** | **Development & Future Stack** |
-|:-----------------------:|:------------------------------:|
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) |
-| ![Google Apps Script](https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white) | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
-| ![Google Sheets](https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white) | ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white) |
-| ![Apple Shortcuts](https://img.shields.io/badge/Apple_Shortcuts-111827?style=for-the-badge&logo=apple&logoColor=white) | ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white) |
-| ![HTTP / JSON](https://img.shields.io/badge/HTTP_%2B_JSON-475569?style=for-the-badge&logo=json&logoColor=white) | ![PWA](https://img.shields.io/badge/Web_%2F_PWA-planned-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white) |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center"><strong>Current Integration</strong></th><th align="center"><strong>Development Tooling</strong></th></tr></thead>
+<tbody>
+<tr><td align="center"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black" /></td><td align="center"><img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white" /></td></tr>
+<tr><td align="center"><img alt="Google Apps Script" src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&amp;logo=google&amp;logoColor=white" /></td><td align="center"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" /></td></tr>
+<tr><td align="center"><img alt="Google Sheets" src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&amp;logo=googlesheets&amp;logoColor=white" /></td><td align="center"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&amp;logo=nodedotjs&amp;logoColor=white" /></td></tr>
+<tr><td align="center"><img alt="Apple Shortcuts" src="https://img.shields.io/badge/Apple_Shortcuts-111827?style=for-the-badge&amp;logo=apple&amp;logoColor=white" /></td><td align="center"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white" /></td></tr>
+<tr><td align="center"><img alt="HTTP / JSON" src="https://img.shields.io/badge/HTTP_%2B_JSON-475569?style=for-the-badge&amp;logo=json&amp;logoColor=white" /></td><td align="center"><img alt="clasp" src="https://img.shields.io/badge/clasp-source%20recovery-4285F4?style=for-the-badge&amp;logo=google&amp;logoColor=white" /></td></tr>
+</tbody>
+</table>
+</div>
+
 
 </div>
 
-GitHub Actions and the PWA are **planned**; badges indicate technologies in scope, not operational features. `clasp` is the planned source-recovery tool for Apps Script.
+GitHub Actions and `clasp` remain tooling planned for recovery and CI/CD. Badges do not imply that those pipelines are deployed.
 
 ## 📂 Project Structure
 
@@ -125,40 +138,34 @@ cd calify
 
 No functional installation command is provided until the public setup flow has been tested with synthetic data.
 
-## 🗺️ Roadmap
+## 🗺️ Engineering Roadmap
 
-<div align="center">
+Future development and version-specific designs are maintained outside the V1 overview to avoid presenting unfinished capabilities as shipped.
 
-| Stage | Deliverable | Status |
-|:-----:|:-----------:|:------:|
-| 00 | Recover and audit V1 | In progress |
-| 01 | Repository and source-control foundation | In progress |
-| 02 | Harden backend and grading writes | Planned |
-| 03 | CI/CD, staging and rollback | Planned |
-| 04 | Public self-hosted configuration | Planned |
-| 05 | iOS Shortcut V2 | Planned |
-| 06 | Web/PWA client | Planned |
-| 07 | Tested public release | Planned |
-| 08 | Hosted multi-user evaluation | Future |
-
-</div>
-
-📄 [Detailed delivery roadmap, acceptance criteria, and learning objectives](docs/ROADMAP.md)
+📄 [Explore the complete versioned roadmap and acceptance criteria](docs/ROADMAP.md) · [Branching Strategy](docs/BRANCHING_STRATEGY.md)
 
 ## 🔐 Security & Privacy
 
 Calify follows a privacy-first approach. The public repository must never include live credentials, personal API endpoints, private spreadsheet IDs, the signed original personal Shortcut, or real student grades. Public releases require security review and independent validation.
 
-📄 [Security policy and safe reporting](docs/SECURITY.md)
+📄 [Security policy and safe reporting](docs/PRIVACY_AND_SECURITY.md)
 
 ## 📚 Documentation
 
-| Document | Purpose |
-|:--------:|:-------:|
-| [Architecture](docs/ARCHITECTURE.md) | V1 baseline, V2 target, diagrams, data rules |
-| [Roadmap](docs/ROADMAP.md) | Milestones, release gates and required learning |
-| [iOS Shortcut V2 Design](docs/design/IOS_SHORTCUT_V2.md) | Proposed UX and server integration |
-| [Security Policy](docs/SECURITY.md) | Privacy, source publication and responsible reports |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Document</th><th align="center">Purpose</th></tr></thead>
+<tbody>
+<tr><td align="center"><a href="docs/ARCHITECTURE.md">Architecture</a></td><td align="center">V1 baseline, V2 target, diagrams, data rules</td></tr>
+<tr><td align="center"><a href="docs/ROADMAP.md">Roadmap</a></td><td align="center">Milestones, release gates and required learning</td></tr>
+<tr><td align="center"><a href="docs/design/IOS_SHORTCUT_V2.md">iOS Shortcut V2 Design</a></td><td align="center">Proposed UX and server integration</td></tr>
+<tr><td align="center"><a href="docs/PRIVACY_AND_SECURITY.md">Privacy &amp; Security Guidelines</a></td><td align="center">Privacy, source publication and responsible reports</td></tr>
+<tr><td align="center"><a href="docs/BRANCHING_STRATEGY.md">Branching Strategy</a></td><td align="center">Main branch, V2 branch, feature branches and releases</td></tr>
+<tr><td align="center"><a href="docs/LICENSING.md">Licensing Options</a></td><td align="center">Distribution rights and liability disclaimer differences</td></tr>
+</tbody>
+</table>
+</div>
+
 
 **Internal-only material:** detailed private audits, personal Shortcut inventories, original production exports, and personal Learning Notes are maintained outside the public repository. They are not end-user documentation.
 
@@ -168,7 +175,7 @@ Code contributions will open after a reviewed public source baseline and contrib
 
 ## 📄 License
 
-The open-source license has not yet been selected. **`SECURITY.md` is not a license.** No license is implied for unreleased production code.
+**Licensing decision pending.** The repository contains planning documentation; no personal production code is released. See [Licensing Options](docs/LICENSING.md) for the difference between permissive reuse and restrictions on redistributing copies.
 
 ---
 

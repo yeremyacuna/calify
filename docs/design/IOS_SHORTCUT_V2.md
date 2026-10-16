@@ -9,7 +9,9 @@ This is a **future client experience specification**: what screens and operation
 
 It is not a list of verified current Shortcut actions. A separate, private audit will document V1's exact action-by-action behavior once the original signed archive can be decoded.
 
-## User Journey
+## User Flow Diagram
+
+**Diagram type:** **User Flow Diagram (Process Flowchart)**, authored directly in Markdown using a Mermaid `flowchart TD` code block. It represents user actions and decisions, not a full UX User Journey Map with emotions, motivations, and pain points.
 
 ```mermaid
 flowchart TD
@@ -35,16 +37,22 @@ flowchart TD
 
 ## Experience Requirements
 
-| Feature | Intended Behavior | Verification |
-|:-------:|:-----------------:|:------------:|
-| First-run setup | Guide students through their own configuration | Planned |
-| Dynamic course list | Read courses from the authorized API | Requires contract audit |
-| Pending assessments | Display readable names, dates and scoring mode | Requires contract audit |
-| Grade entry | Accept a valid numeric zero and reject missing input | Planned |
-| Preview | Show the write before sending any mutation | Planned |
-| Safe submit | Server checks authorization, state and duplicate requests | Planned |
-| Failure feedback | Distinguish network failure, stale record, auth error | Planned |
-| Accessibility | Clear labels, predictable navigation and cancellation | Planned |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Feature</th><th align="center">Intended Behavior</th><th align="center">Verification</th></tr></thead>
+<tbody>
+<tr><td align="center">First-run setup</td><td align="center">Guide students through their own configuration</td><td align="center">Planned</td></tr>
+<tr><td align="center">Dynamic course list</td><td align="center">Read courses from the authorized API</td><td align="center">Requires contract audit</td></tr>
+<tr><td align="center">Pending assessments</td><td align="center">Display readable names, dates and scoring mode</td><td align="center">Requires contract audit</td></tr>
+<tr><td align="center">Grade entry</td><td align="center">Accept a valid numeric zero and reject missing input</td><td align="center">Planned</td></tr>
+<tr><td align="center">Preview</td><td align="center">Show the write before sending any mutation</td><td align="center">Planned</td></tr>
+<tr><td align="center">Safe submit</td><td align="center">Server checks authorization, state and duplicate requests</td><td align="center">Planned</td></tr>
+<tr><td align="center">Failure feedback</td><td align="center">Distinguish network failure, stale record, auth error</td><td align="center">Planned</td></tr>
+<tr><td align="center">Accessibility</td><td align="center">Clear labels, predictable navigation and cancellation</td><td align="center">Planned</td></tr>
+</tbody>
+</table>
+</div>
+
 
 ## Privacy and Configuration
 
@@ -63,18 +71,24 @@ Before implementation, verify against **active Production**:
 
 ## Test Cases
 
-| Scenario | Acceptance Requirement |
-|:--------:|:----------------------:|
-| Score = 0 | Valid recording with clear confirmation |
-| Score missing | No write |
-| Above max / negative | Validation error |
-| Completed activity | No silent overwrite |
-| Duplicate request | No duplicate mutation |
-| No pending activities | Clear empty state |
-| Unauthorized endpoint | No write; actionable feedback |
-| Timeout / offline | Clear uncertainty, safe recovery |
-| User cancellation | No mutation |
-| Demo installation | Successful first-time setup with fake data |
+<div align="center">
+<table align="center">
+<thead><tr><th align="center">Scenario</th><th align="center">Acceptance Requirement</th></tr></thead>
+<tbody>
+<tr><td align="center">Score = 0</td><td align="center">Valid recording with clear confirmation</td></tr>
+<tr><td align="center">Score missing</td><td align="center">No write</td></tr>
+<tr><td align="center">Above max / negative</td><td align="center">Validation error</td></tr>
+<tr><td align="center">Completed activity</td><td align="center">No silent overwrite</td></tr>
+<tr><td align="center">Duplicate request</td><td align="center">No duplicate mutation</td></tr>
+<tr><td align="center">No pending activities</td><td align="center">Clear empty state</td></tr>
+<tr><td align="center">Unauthorized endpoint</td><td align="center">No write; actionable feedback</td></tr>
+<tr><td align="center">Timeout / offline</td><td align="center">Clear uncertainty, safe recovery</td></tr>
+<tr><td align="center">User cancellation</td><td align="center">No mutation</td></tr>
+<tr><td align="center">Demo installation</td><td align="center">Successful first-time setup with fake data</td></tr>
+</tbody>
+</table>
+</div>
+
 
 ## Source & Release Controls
 
