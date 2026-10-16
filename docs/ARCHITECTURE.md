@@ -27,7 +27,7 @@ flowchart TD
 
 **Diagram type:** Data Flow / Component Dependency Diagram. Arrows identify how data enters the tracker and how Grade Entry and Settings contribute to Control calculations and Dashboard output.
 
-The live personal setup and seven known trackers were inspected at the sheet/metadata level. This document does not claim that the original signed Shortcut's individual actions or the current Production source modules have been fully decoded.
+Existing tracker templates and their schema have been reviewed at the metadata level. Public documentation intentionally omits personal course inventories, spreadsheet identifiers, operational configuration and private audit evidence.
 
 ### Academic Tracker Contract
 
