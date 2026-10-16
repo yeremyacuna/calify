@@ -1,77 +1,103 @@
-# Calify — Architecture Baseline
+# 🏗️ Calify — Architecture
 
-## Status and scope
+> **Evidence labels:** **Verified V1** means established integration or reviewed historical source. **Production inspection pending** means behavior has not been confirmed in the active modular codebase. **V2 proposal** describes a target, not a shipped feature.
 
-This document distinguishes **confirmed V1 design**, **partially inspected source**, and **V2 proposal**. Private identifiers, endpoints and credentials are intentionally omitted.
+## System Overview
 
-## V1 — Confirmed high-level integration
+![Calify system architecture](../assets/diagrams/system-overview.svg)
 
-```text
-Apple Shortcuts (iOS)
-    -> HTTP request / JSON
-    -> Google Apps Script Web App
-    -> Google Sheets Grade Entry
-    -> Control calculations
-    -> Dashboard presentation
+## V1 — Existing Personal System
+
+```mermaid
+flowchart TD
+    A["Apple Shortcuts · iOS"] -->|HTTPS / JSON| B["Google Apps Script Web App"]
+    B --> C["Google Sheets"]
+    C --> D["Grade Entry · activity ledger"]
+    C --> E["Settings · grading rules"]
+    D --> F["Control · calculations"]
+    E --> F
+    F --> G["Dashboard · results"]
+    classDef active fill:#17324D,color:#FFFFFF,stroke:#009688
+    class A,B,C active
 ```
 
-Existing user-managed trackers have the four-tab organization:
+The live personal setup and seven known trackers were inspected at the sheet/metadata level. This document does not claim that the original signed Shortcut's individual actions or the current Production source modules have been fully decoded.
 
-1. `Dashboard`
-2. `Grade Entry`
-3. `Control`
-4. `Settings`
+### Academic Tracker Contract
 
-The `Grade Entry` ledger uses fourteen columns (A–N). Its data and score rules are not interchangeable with generic examples. At least one course has a distinct score-column heading; backend assumptions must be tested rather than inferred from display labels.
+| Position | Sheet | Responsibility |
+|:--------:|:-----:|:--------------:|
+| 1 | `Dashboard` | Display current status and grade projections |
+| 2 | `Grade Entry` | Preserve assessment records and actual scores |
+| 3 | `Control` | Compute results using verified course rules |
+| 4 | `Settings` | Hold weights, configurations and grading parameters |
 
-## Legacy backup — Source-inspected
+The ledger comprises fourteen columns (A–N). The academic model distinguishes pending scores from legitimate zeros, actual earned results from projections, and scoring activities from completion-only activities. Some course headers and evaluation rules differ; adapters must not assume identical schemas merely from visual similarities.
 
-A historical single-file Apps Script implementation exposes:
-- `doGet()` service metadata.
-- `doPost(e)` with `listCourses`, `listPending`, `recordScore`, and `markCompleted`.
-- Script-property token comparison.
-- Script-wide locking for write operations.
-- Spreadsheet reads/writes and JSON responses.
+## Legacy API — Historical Source Review
 
-Historical risks to investigate in the active backend:
-- Completed records being changed by a stale or repeated request.
-- Descriptive assessment IDs colliding.
-- Empty/missing scores being coerced to zero.
-- Partial writes and rollback limitations.
-- Ambiguous authorization and secrets handling.
+A historical single-file Apps Script backup includes:
+- `doGet()` metadata response and `doPost(e)` action dispatch.
+- `listCourses`, `listPending`, `recordScore`, and `markCompleted`.
+- Token checking through Script Properties and script locking for writes.
+- Spreadsheet lookup, grade updates, and Dashboard response summary.
 
-**These risks are confirmed or inferred only for the historical backup, not automatically for active Production.**
+The historical source presents risks around stale-score overwrites, string-built assessment IDs, blank-to-zero coercion, and partial writes. **These are not automatically verified defects in Production 1.1.**
 
-## Active production — Inventory only
+The active Apps Script Production project contains multiple `.gs` modules; complete content-level audit and deployment comparison remain pending.
 
-The current Apps Script project exposes source file names such as `api.gs`, `auth.gs`, `config.gs`, `courseService.gs`, `assessmentService.gs`, `sheetRepository.gs`, `tests.gs`, and parallel `*Notes.gs` modules.
+## V2 — Proposed Public Architecture
 
-The source contents and deployed version boundaries still need full verification before modifying or publishing any backend code.
-
-## V2 — Target architecture
-
-```text
-           iOS Shortcut        Web / PWA
-                  \             /
-                   API contract
-                        |
-             Validation + authorization
-                        |
-               Assessment services
-                        |
-               Google Sheets adapter
-                        |
-               User-owned trackers
+```mermaid
+flowchart TD
+    IOS["iOS Shortcut V2"] --> API["Versioned API contract"]
+    WEB["Web / PWA · planned"] --> API
+    API --> AUTH["Authorization + request validation"]
+    AUTH --> SERVICE["Assessment services + idempotency"]
+    SERVICE --> ADAPTER["Google Sheets adapter"]
+    ADAPTER --> DATA["User-owned trackers"]
+    SERVICE --> LOG["Safe diagnostics · planned"]
+    classDef planned fill:#EAF0F6,color:#17324D,stroke:#4285F4
+    class IOS,WEB,API,AUTH,SERVICE,ADAPTER,DATA,LOG planned
 ```
 
-The initial public distribution target is **user-owned/self-hosted**, not shared use of the personal production account or token. A hosted multi-user design is optional and requires a separate identity and tenant-isolation architecture.
+### Public Distribution Model
 
-## Source of truth and deployment
+**First target:** a self-hosted edition where students own their Google Sheet(s), deployment, and configuration. The maintainer's production API and personal trackers must never become shared public infrastructure.
 
-- During recovery: live Apps Script and the original iOS Shortcut are read-only baselines.
-- After code recovery: Git becomes the reviewed source of truth for changes.
-- CI should test untrusted contributions without access to deployment credentials.
-- Staging deployments must be isolated from personal production.
-- Production releases require explicit approval, tests, and rollback documentation.
+**Later possibility:** hosted multi-user service with separate identity, authorization, storage isolation and operational controls. This is a separate architectural decision, not a dependency of the initial public edition.
 
-See [Roadmap](ROADMAP.md) and [Shortcut V1 audit](audits/SHORTCUT_V1.md).
+## Security Boundaries
+
+```mermaid
+sequenceDiagram
+    participant U as Student
+    participant C as iOS / Web client
+    participant A as Authorized API
+    participant S as User-owned Google Sheet
+    U->>C: Select course, assessment, score
+    C->>U: Show intended write
+    U->>C: Confirm
+    C->>A: Submit request and request ID
+    A->>A: Authenticate, validate and check state
+    alt Valid and not previously applied
+      A->>S: Record authorized write
+      S-->>A: Updated state
+      A-->>C: Confirmed result
+    else Invalid, stale or duplicate
+      A-->>C: Structured rejection or previous result
+    end
+    C-->>U: Clear status
+```
+
+The sequence diagram is the **target behavior**, not a claim that all of these controls already exist.
+
+## Engineering Constraints
+
+- V1 is protected during recovery; no production deployments or live grade edits.
+- The release source of truth should become reviewed Git history after safe recovery.
+- Use staging and synthetic grade data for contract/regression testing.
+- Build public onboarding before offering a distributable Shortcut.
+- Prefer small verified improvements over an untested backend replacement.
+
+See [Roadmap](ROADMAP.md) and [iOS Shortcut V2 Design](design/IOS_SHORTCUT_V2.md).

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc">
+<title id="title">Calify V1 architecture and Calify V2 proposal</title>
+<desc id="desc">The existing personal iOS Shortcut communicates through HTTP and JSON with a Google Apps Script API and Google Sheets trackers. The proposed V2 adds a web client, validated API contract, and independently owned trackers.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#F2F7FF"/><stop offset="1" stop-color="#EEF6FA"/></linearGradient><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#457B9D"/></marker></defs>
+<style>
+.head{font:700 17px Arial,sans-serif;fill:#17324D}.sub{font:13px Arial,sans-serif;fill:#52687C}.section{font:700 22px Arial,sans-serif;fill:#17324D}.tag{font:700 12px Arial,sans-serif;letter-spacing:1px;fill:#009688}
+</style>
+<rect width="1200" height="610" rx="20" fill="url(#bg)"/>
+<text class="section" x="52" y="55">Personal V1 — existing integration</text><text class="tag" x="52" y="78">CURRENT</text>
+<rect x="55" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="210" y="147" class="head" text-anchor="middle">Apple Shortcuts</text><text x="210" y="172" class="sub" text-anchor="middle">Personal iOS workflow</text>
+<rect x="445" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="600" y="147" class="head" text-anchor="middle">Google Apps Script</text><text x="600" y="172" class="sub" text-anchor="middle">API web application</text>
+<rect x="835" y="112" width="310" height="89" rx="16" fill="#FFFFFF" stroke="#90A4B8" stroke-width="2"/><text x="990" y="147" class="head" text-anchor="middle">Google Sheets</text><text x="990" y="172" class="sub" text-anchor="middle">Private course trackers</text>
+<path d="M 365 157 L 445 157" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 755 157 L 835 157" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<text class="sub" x="402" y="132" text-anchor="middle">HTTP</text><text class="sub" x="795" y="132" text-anchor="middle">Data</text>
+<rect x="55" y="222" width="1090" height="50" rx="12" fill="#E3EDF7"/>
+<text class="sub" x="600" y="252" text-anchor="middle">Dashboard  |  Grade Entry  |  Control  |  Settings</text>
+<path d="M 45 302 L1155 302" stroke="#C5D3E0" stroke-width="2"/>
+<text class="section" x="52" y="349">Calify V2 — proposed architecture</text><text class="tag" x="52" y="372">PLANNED</text>
+<rect x="55" y="403" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="165" y="438" class="head" text-anchor="middle">iOS Shortcut V2</text><text x="165" y="463" class="sub" text-anchor="middle">Guided setup</text>
+<rect x="55" y="520" width="220" height="67" rx="16" fill="#FFFFFF" stroke="#7E57C2" stroke-width="2"/><text x="165" y="555" class="head" text-anchor="middle">Web / PWA</text><text x="165" y="580" class="sub" text-anchor="middle">Cross-platform client</text>
+<rect x="355" y="438" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="465" y="473" class="head" text-anchor="middle">API Contract</text><text x="465" y="498" class="sub" text-anchor="middle">Validation and auth</text>
+<rect x="655" y="438" width="220" height="100" rx="16" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"/><text x="765" y="473" class="head" text-anchor="middle">Backend Services</text><text x="765" y="498" class="sub" text-anchor="middle">Grade operations</text>
+<rect x="955" y="438" width="195" height="100" rx="16" fill="#FFFFFF" stroke="#009688" stroke-width="2"/><text x="1052.5" y="473" class="head" text-anchor="middle">Google Sheets</text><text x="1052.5" y="498" class="sub" text-anchor="middle">User-owned trackers</text>
+<path d="M 275 453 L 355 469" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 275 553 L 355 510" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 575 488 L 655 488" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/><path d="M 875 488 L 955 488" stroke="#457B9D" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+</svg>

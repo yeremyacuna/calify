@@ -1,27 +1,174 @@
-# Sensitive local configuration
+# ==========================================================
+# Calify — Public Repository Ignore Rules
+# Keep private academic data and deployment secrets out of Git.
+# ==========================================================
+
+# ----------------------------------------------------------
+# 01. Environment variables and private configuration
+# ----------------------------------------------------------
 .env
 .env.*
 !.env.example
-.clasprc.json
-.clasp.json
+*.env.local
+config/local/
+config/private/
+**/config.private.*
 **/secrets.*
-**/*.pem
-**/*.key
-**/*credentials*.json
+**/secret.*
+*.credentials
+*credentials*.json
+*service-account*.json
 
-# Raw personal exports and academic data
+# ----------------------------------------------------------
+# 02. Google Apps Script and clasp credentials
+# ----------------------------------------------------------
+# .clasp.json can reveal a personal Apps Script project ID.
+.clasp.json
+.clasprc.json
+.clasprc*
+**/.clasp.json
+**/.clasprc.json
+**/appsscript.local.json
+.gcloud/
+credentials.json
+token.json
+
+# ----------------------------------------------------------
+# 03. Original Apple Shortcuts and personal exports
+# ----------------------------------------------------------
+# Public releases require explicit review before force-adding.
 *.shortcut
-!apps/ios-shortcuts/releases/*.shortcut
 *.wflow
+*.shortcut-backup
+*.shortcut.bak
+*.mobileconfig
 *_private.*
+*-personal.*
 private/
 backups/
-*.xlsx
+backup/
+exports/
+local-data/
 
-# Tooling and build output
+# ----------------------------------------------------------
+# 04. Academic records and real tracker snapshots
+# ----------------------------------------------------------
+*.xlsx
+*.xls
+*.xlsm
+*.ods
+*.numbers
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+# Reviewed synthetic fixtures may be explicitly force-added.
+
+# ----------------------------------------------------------
+# 05. Node.js / package managers
+# ----------------------------------------------------------
 node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.pnp.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Keep package-lock.json and other reproducible lockfiles.
+# Do not ignore appsscript.json: it is a source manifest.
+
+# ----------------------------------------------------------
+# 06. Build output, tests and coverage
+# ----------------------------------------------------------
 dist/
+build/
+out/
+.tmp/
+.temp/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
 coverage/
+.nyc_output/
+test-results/
+playwright-report/
+*.lcov
+
+# ----------------------------------------------------------
+# 07. IDEs and editor files
+# ----------------------------------------------------------
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*.swn
+*~
+*.orig
+*.rej
+*.code-workspace
+
+# ----------------------------------------------------------
+# 08. Operating systems and generated files
+# ----------------------------------------------------------
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ----------------------------------------------------------
+# 09. Logs, crashes and temporary archives
+# ----------------------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.crash
+*.stackdump
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# ----------------------------------------------------------
+# 10. Private key and certificate material
+# ----------------------------------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+
+# ----------------------------------------------------------
+# 11. Python helper tooling (if used)
+# ----------------------------------------------------------
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# ----------------------------------------------------------
+# Tracked examples / deliberate exceptions
+# ----------------------------------------------------------
+# Keep docs/, SVG architecture assets, Markdown, .gitkeep,
+# synthetic JSON fixtures and reviewed source code in Git.
+# A .gitignore file is NOT a substitute for secret scanning.
