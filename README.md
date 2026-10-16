@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Official approved logo is supplied as the original PNG in the Option 01 upload package. Do not substitute a redrawn SVG. -->
+<img src="assets/branding/official/wordmark-crop.png" alt="Calify official layered C symbol and wordmark — Cool Academic" width="315" />
 
 # Calify
 
@@ -19,7 +19,9 @@
 
 ---
 
-<!-- The approved original banner will be added here after the PNG binary has been uploaded. -->
+<div align="center">
+  <img src="assets/branding/official/readme-banner.png" alt="Official Calify banner — A smarter way to track your academic journey" width="100%" />
+</div>
 
 ## 📑 Table of Contents
 
@@ -49,7 +51,7 @@ Calify V1 is currently used as a functional personal iOS-to-Google-Workspace wor
 ## 🎨 Brand Identity
 
 <div align="center">
-  <!-- Original selected PNG pending binary publication in assets/branding/official/app-icon.png. -->
+  <a href="assets/branding/official/app-icon.png"><img src="assets/branding/official/app-icon.png" alt="Original Calify Option 01 app icon" width="155" /></a>
   <p><strong>Cool Academic</strong> · Midnight Navy · Teal · Cyan</p>
 </div>
 
@@ -62,9 +64,19 @@ Calify uses the selected **Option 01 — Cool Academic** visual direction: a com
 </table>
 </div>
 
-[**Brand Guidelines**](assets/branding/README.md) · [**Design Tokens**](assets/branding/design-tokens.json)
+[**Brand Guidelines**](assets/branding/README.md) · [**Original PDF**](assets/branding/reference/brand-guidelines.pdf) · [**Design Tokens**](assets/branding/design-tokens.json) · [**Asset Integrity**](assets/branding/ORIGINAL_ASSET_MANIFEST.json)
 
-> **Brand source of truth:** the original `Option_01_Cool_Academic.zip` selected by the project owner. Earlier vector reinterpretations were incorrect and have been withdrawn. Original PNG and PDF assets must be uploaded without redrawing; they are not yet in this public repository. Product UI previews remain conceptual.
+> **Official branding:** these images are the original Option 01 artwork approved by the project owner, published without redrawing. The wordmark is a pixel crop from the same approved branding board. Preview screens and wireframes are **design concepts**, not screenshots of released Calify functionality.
+
+### Design References
+
+<div align="center">
+  <a href="assets/branding/reference/branding-board.png"><img src="assets/branding/reference/branding-board.png" alt="Approved Calify Option 01 branding board: logo, colors, typography, and concept screens" width="430" /></a>
+  <a href="assets/branding/reference/wireframes-detailed.png"><img src="assets/branding/reference/wireframes-detailed.png" alt="Conceptual Calify mobile UX wireframes, not a shipping application screenshot" width="430" /></a>
+  <p><sub>Official brand board · Conceptual UX wireframes — click to view originals</sub></p>
+</div>
+
+These references support future design decisions; they do not represent released iOS or web screens.
 
 ## ✨ Calify V1 — Core Capabilities
 
@@ -137,7 +149,11 @@ calify/
 ├── config/
 │   └── examples/              # Safe configuration examples (future)
 ├── assets/
-│   ├── branding/              # Approved brand specification; original raster files pending upload
+│   ├── branding/              # Original selected brand assets and design system
+│   │   ├── official/          # App icon, illustrated banner and wordmark crop
+│   │   ├── reference/         # Branding board, wireframes and PDF guidelines
+│   │   ├── design-tokens.json
+│   │   └── ORIGINAL_ASSET_MANIFEST.json
 │   ├── diagrams/              # Public architecture diagrams
 │   └── screenshots/           # Verified demo screenshots (future)
 ├── docs/

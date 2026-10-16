@@ -1,27 +1,34 @@
-# Publish Approved Option 01 Branding
+# Calify Official Branding — Publication Record
 
-**Release status:** Original binaries not yet committed. This guide exists to finish the publication with no image substitutions or broken README links.
+**Status:** Published and verified in `main` · Cool Academic · Option 01.
 
-## Required assets
+## Source of Truth
 
-Six image/PDF assets are maintained in the prepared `Calify_Branding_Release_Ready.zip`, under `assets/branding/official/` and `assets/branding/reference/`. Their complete source hashes are in [Original Asset Manifest](../../assets/branding/ORIGINAL_ASSET_MANIFEST.json).
+The user-selected `Option_01_Cool_Academic.zip` is the official source for the PNG/PDF design assets. The repository includes exactly the selected files under `assets/branding/official/` and `assets/branding/reference/`. The cropped wordmark is derived from the approved branding board and is not a manually redrawn vector mark.
 
-The current GitHub connector supports text/Git objects but does not directly transfer local binary files into a Git blob. The package therefore includes an independently smoke-tested Python release script that performs the binary copy inside the authorized user's local Git checkout.
+## Published Artifacts
 
-## Publish on Windows
+| Path | Role |
+|:---:|:---:|
+| `assets/branding/official/wordmark-crop.png` | Official wordmark crop in the README |
+| `assets/branding/official/readme-banner.png` | README illustrated header |
+| `assets/branding/official/app-icon.png` | Approved icon design |
+| `assets/branding/reference/branding-board.png` | Original HCI branding board |
+| `assets/branding/reference/wireframes-detailed.png` | Future UX wireframe concepts |
+| `assets/branding/reference/brand-guidelines.pdf` | Full brand reference guide |
 
-1. Download and extract `Calify_Branding_Release_Ready.zip` from the Calify project conversation.
-2. Make sure Git and Python 3 are installed and GitHub authentication is set up.
-3. In a **clean** local clone of `yeremyacuna/calify`, run:
+All artifact sizes and Git blob identities have been compared against the verified original archive. Detailed SHA-256 hashes are in [`ORIGINAL_ASSET_MANIFEST.json`](../../assets/branding/ORIGINAL_ASSET_MANIFEST.json).
 
-```powershell
-git checkout main
-git pull --ff-only origin main
-python "C:\Users\YOUR_USER\Downloads\Calify_Branding_Release_Ready\scripts\publish_official_branding.py" "C:\Users\YOUR_USER\Downloads\Calify_Branding_Release_Ready.zip" --commit --push
-```
+## Verification Steps for Future Changes
 
-The publisher refuses a dirty checkout, unexpected remote or branch, missing source, or checksum mismatch. It copies the verified originals, adds a binary `.gitattributes`, versions its own source, and updates the GitHub README **in the same commit** as the images. Without `--commit --push`, it stages files for manual review.
+1. Verify that every asset exists at the expected path in `main`.
+2. Validate the file's SHA-256 hash against the approved source and review any intended update.
+3. Check that the README uses the **real original images** rather than placeholders, stock artwork or regenerated SVGs.
+4. Confirm branding images are clearly separated from **future UI concepts**.
+5. Review the change on a feature branch, then promote it through the documented branching process.
 
-4. Open GitHub and verify that the approved logo, banner and design-gallery images render correctly. Update `v2` through the documented branching workflow after approval.
+## Security and Scope
 
-**Never** upload the personal iOS Shortcut, live API tokens or private academic trackers as part of this branding release.
+No personal Shortcut archive, API token, production endpoint, private spreadsheet ID, actual grade ledger or student record belongs in the publicly distributed branding assets.
+
+The asset-publication process is complete. Original work products remain available in GitHub for reproducible use. An optional transparent vector logo requires a separate high-fidelity design task and explicit approval.
