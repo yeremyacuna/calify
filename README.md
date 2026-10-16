@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/branding/official/calify-logo-transparent.svg" alt="Official Calify logo with transparent background" width="315" />
+<img src="assets/branding/official/calify-logo-transparent-outline.svg" alt="Official Calify logo with transparent background and a thin white outline" width="315" />
 
 # Calify
 
