@@ -54,6 +54,18 @@ For background format documentation, consult [AEA](https://keith.github.io/xcode
 - Treat **exported source**, **deployed web-app revision**, and **live client behavior** as separate evidence levels.
 - All production code and live grade modifications remain prohibited in this phase.
 
+## User-Confirmed Runtime Behavior
+
+The owner confirms that the present personal production setup has **four course keys**: `MC`, `PH2`, `AP`, `HCI`. A `Pending` assessment can legitimately have its provisional score replaced; after submission, the Shortcut changes it to `Completed`, after which the assessment disappears from the pending list.
+
+No accidental reappearance of completed assessments, incorrect zero recording or missing assessment was reported during ordinary personal use. This observation confirms a useful client workflow but **does not replace backend tests** for stale/direct submissions.
+
+The preferred user-facing abbreviation for Computational Mathematics is **CM**, while `MC` remains the current API identifier; aliases should be introduced only with a backward-compatible contract. Additional trackers: WeTALK English 2, Architecture of Computers, and Database. Existing HCI spreadsheet-property binding must be checked before any real mutation. See [Course Compatibility Plan](COURSE_COMPATIBILITY.md).
+
+## Deployment Evidence — What We Still Need
+
+The available export proves the project **source**, not the web app revision currently serving requests. The next independent comparison needs only the **deployment version number**, its status/date if visible, execution identity setting, and access scope. The owner **must not share the deployment URL, deployment ID, access token, or Script Property values**. Script Property **names** have already been recovered from the source, so no repeat is required.
+
 ## Next Completion Gates
 
 1. Decode the signed Shortcut and inventory ordered actions using a trusted compatible tool.
